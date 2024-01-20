@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import { navbarLinks } from "@/utils/data";
+import { mobileNav, navbarLinks } from "@/utils/data";
 import Link from "next/link";
 import Down from "@/svgs/down";
 import UserSvg from "@/svgs/user";
@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography";
 import Bars from "@/svgs/bars";
 import Wishlist from "../wishlist";
 
-const Navbar = () => {
+const Navbar = ({ page }: { page: string }) => {
   const cart = useAppSelector((store) => store.cart);
   const waitlist = useAppSelector((store) => store.waitlist);
   const [state, setState] = useState(false);
@@ -63,7 +63,17 @@ const Navbar = () => {
             <Bars />
           </Box>
         </Box>
-        {mobile ? null : (
+        {mobile ? null : windowSize < 600 && page === "home" ? (
+          <Box className={styles.navbarLinks}>
+            {mobileNav?.map((items, index) => {
+              return (
+                <Link href={items.link} key={index}>
+                  {items.title}
+                </Link>
+              );
+            })}
+          </Box>
+        ) : (
           <Box className={styles.navbarLinks}>
             {navbarLinks?.map((items, index) => {
               if (items.dropdown) {
@@ -84,7 +94,7 @@ const Navbar = () => {
           </Box>
         )}
       </Box>
-      {mobile ? null : (
+      {mobile ? null : windowSize < 600 && page === "home" ? null : (
         <Box sx={{ display: "flex", alignItems: "center", flexDirection: { xs: "column", sm: "row" }, width: { xs: "100%", sm: "30%" } }}>
           <Box sx={{ display: "flex", gap: "5px", padding: "15px", alignItems: "center" }}>
             <UserSvg />

@@ -35,6 +35,25 @@ export const navbarLinks = [
   },
 ];
 
+export const mobileNav = [
+  {
+    title: "Home",
+    link: "/",
+  },
+  {
+    title: "Product",
+    link: "/",
+  },
+  {
+    title: "Pricing",
+    link: "/",
+  },
+  {
+    title: "Contact",
+    link: "/",
+  },
+];
+
 export const footerLinks = [
   {
     title: "Company Info",

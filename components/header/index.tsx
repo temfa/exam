@@ -3,11 +3,11 @@ import styles from "./styles.module.css";
 import Follow from "../follow";
 import Navbar from "../navbar";
 
-const Header = () => {
+const Header = ({ page }: { page: string }) => {
   return (
     <div className={styles.headerContainer}>
       <Follow />
-      <Navbar />
+      <Navbar page={page} />
     </div>
   );
 };

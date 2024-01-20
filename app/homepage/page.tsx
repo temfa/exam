@@ -11,7 +11,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <>
-      <Header />
+      <Header page="home" />
       <Gallery />
       <FeaturedProducts />
       <Services />

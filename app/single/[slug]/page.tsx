@@ -34,7 +34,7 @@ const Single = ({ params }: { params: { slug: string } }) => {
   }, [getSingleProducts, params.slug]);
   return (
     <>
-      <Header />
+      <Header page="" />
       <BreadCrumb />
       <SingleProducts product={products} />
       <Description product={products} />
