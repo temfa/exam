@@ -1,0 +1,102 @@
+.navbarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 17px 0px 38px;
+    box-sizing: border-box;
+}
+
+.navbarWrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbarLogo {
+    box-sizing: border-box;
+}
+
+.navbarLogo h2 {
+    color: var(--text-color, #252B42);
+    font-style: normal;
+    padding: 13px 79px 13px 0px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+
+.navbarLinks {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navbarLinks a {
+    color: var(--second-text-color, #737373);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+}
+
+.navbarLinks div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.navbarLinks div p {
+    color: var(--text-color, #252B42);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+}
+
+.navbarLogin {
+    display: flex;
+    align-items: center;
+}
+
+.navbarLogin div {
+    display: flex;
+    gap: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.navbarLogin div h2 {
+    color: var(--primary-color, #23A6F0);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+.navbarLogin div p {
+    color: var(--primary-color, #23A6F0);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+
+@media screen and (max-width:600px) {
+    .navbarLinks {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .navbarLinks div svg {
+        display: none;
+    }
+}

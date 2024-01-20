@@ -1,0 +1,32 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footerCont {
+    width: 100%;
+    background: var(--light-gray-1, #FAFAFA);
+    padding: 40px 0px;
+}
+
+.footerHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerHeader>h2 {
+    color: var(--text-color, #252B42);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+
+.footerHeader div {
+    display: flex;
+    gap: 20px;
+}
