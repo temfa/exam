@@ -53,7 +53,7 @@ const Navbar = ({ page }: { page: string }) => {
             justifyContent: "space-between",
             alignItems: "center",
             width: { xs: "100%", sm: "unset" },
-            pr: { xs: "35px", sm: "0px" },
+            paddingRight: { xs: "0px", sm: "79px" },
             py: { xs: "23px", sm: "0px" },
           }}>
           <Typography variant="h2" color="#252B42" sx={{ py: "13px", fontSize: 24, fontWeight: 700, lineHeight: "32px", letterSpacing: 0.1 }}>
